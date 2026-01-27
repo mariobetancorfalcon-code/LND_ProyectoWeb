@@ -1,40 +1,6 @@
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column-reverse;
-        padding: 1.5rem;
-        gap: 1.5rem;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 0;
-        margin-bottom: 1rem;
-    }
-
-    .nav ul li {
-        margin: 0.75rem 0;
-        font-size: 1.1rem;
-
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-        margin-bottom: 8rem;
-        line-height: 1.2;
-    }
-
-    .hero {
-        background-position: center top;
-
-    }
-
-    button {
-        width: 80%;
-        padding: 12px;
-        font-size: 1rem;
-    }
+:root {
+    --primary-color: #4d4d4d;
+    --secondary-color: #fff;
 }
 
 @keyframes fadeIn {
@@ -132,9 +98,52 @@ button a {
     margin-bottom: 20rem;
 }
 
+.about {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 footer {
     background-color: #000000;
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .nav ul li {
+        /* margin: 0.75rem 0; */
+        font-size: 1.1rem;
+
+    }
+
+    .hero-content h1 {
+        font-size: 14pt;
+        margin-bottom: 8rem;
+        line-height: 1.2;
+    }
+
+    .hero {
+        background-position: center top;
+    }
+
+    button {
+        width: 80%;
+        padding: 12px;
+        font-size: 1rem;
+    }
 }
