@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #4d4d4d;
+    --primary-color: #131718;
     --secondary-color: #fff;
 }
 
@@ -38,7 +38,7 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-button {
+.btn {
     background-color: #333;
     color: #fff;
     border: none;
@@ -47,7 +47,7 @@ button {
     border-radius: 5px;
 }
 
-button a {
+.btn a {
     text-decoration: none;
     color: #fff;
 }
@@ -101,13 +101,85 @@ button a {
 .about {
     background-color: var(--primary-color);
     color: white;
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 10%;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about img {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.gallery {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
 }
 
 footer {
     background-color: #000000;
     color: #fff;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+footer li {
+    list-style: none;
+    
+}
+
+footer-enlace{
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media {
+    height: 64px;
+    width: 64px;
 }
 
 @media (max-width: 768px) {
@@ -126,7 +198,6 @@ footer {
     }
 
     .nav ul li {
-        /* margin: 0.75rem 0; */
         font-size: 1.1rem;
 
     }
@@ -145,5 +216,28 @@ footer {
         width: 80%;
         padding: 12px;
         font-size: 1rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .about h2,
+    .about p,
+    .about button {
+        grid-column: 1;
+        text-align: center;
+    }
+
+    .about img {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }
