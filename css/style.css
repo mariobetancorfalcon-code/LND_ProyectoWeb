@@ -13,14 +13,27 @@
     }
 }
 
-@keyframes appear{
-    from{
+@keyframes appear {
+    from {
         opacity: 0;
         transform: translateX(-100);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes appear-bottom {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
     }
 }
 
@@ -116,9 +129,9 @@ body {
     align-items: center;
     gap: 2rem;
     padding: 4rem 10%;
-   animation: appear 5s linear;
-   animation-timeline: view();
-   animation-range: entry 0% cover 40% ;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .about-content {
@@ -126,19 +139,17 @@ body {
     flex-direction: column;
 }
 
-.about-content button{
+.about-content button {
     margin-top: 20px;
     height: 32px;
     width: auto;
-    background: linear-gradient(
-        to left,
-        #e4e4e4,
-        #0d0d0d
-    );
+    background: linear-gradient(to left,
+            #e4e4e4,
+            #0d0d0d);
     border: none;
 }
 
-.about-content a{
+.about-content a {
     text-decoration: none;
     color: var(--secondary-color);
 }
@@ -150,6 +161,39 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services article {
+    margin: 10px 2em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.mapa {
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.mapa h2 {
+    color: var(--secondary-color);
+}
+
+.mapa iframe {
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .gallery {
@@ -189,16 +233,16 @@ footer {
     color: #fff;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
-    
+    justify-content: space-between;
+
 }
 
 footer li {
     list-style: none;
-    
+
 }
 
-footer-enlace{
+footer-enlace {
     text-align: left;
 }
 
@@ -207,9 +251,9 @@ footer a {
     color: #fff;
 }
 
-.social-media {
-    height: 64px;
-    width: 64px;
+.social-media img {
+    height: 32px;
+    width: 32px;
 }
 
 @media (max-width: 768px) {
