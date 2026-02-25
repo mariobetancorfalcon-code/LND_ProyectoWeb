@@ -142,16 +142,16 @@ body {
 .about-content button {
     margin-top: 20px;
     height: 32px;
-    width: auto;
-    background: linear-gradient(to left,
-            #e4e4e4,
-            #0d0d0d);
+    width: 100px;
+    background-color: var(--secondary-color);
     border: none;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .about-content a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #000000;
 }
 
 .about img {
