@@ -3,6 +3,10 @@
     --secondary-color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,6 +14,18 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
@@ -38,7 +54,7 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-button {
+.btn {
     background-color: #333;
     color: #fff;
     border: none;
@@ -47,7 +63,7 @@ button {
     border-radius: 5px;
 }
 
-button a {
+.btn a {
     text-decoration: none;
     color: #fff;
 }
@@ -78,8 +94,8 @@ button a {
 }
 
 .hero {
-    background-image: url('../img/FondoHome.jpg');
-    background-size: cover;
+    background-color: var(--primary-color);
+    overflow: hidden;
     background-position: center;
     height: 100vh;
     display: flex;
@@ -90,29 +106,84 @@ button a {
 
 .hero-content {
     text-align: center;
+    background-color: transparent;
+    background-blend-mode: multiply;
+    backdrop-filter: blur(10px);
     color: rgb(0, 0, 0);
+
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    color: var(--secondary-color);
+    font-size: 6rem;
     margin-bottom: 20rem;
-}
 
+}
+/* Scroll indicator */
+.scroll-hint {
+    position: absolute;
+    bottom: 40px; right: 48px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fade-up 1s 1s both;
+  }
+  .scroll-hint span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    writing-mode: vertical-rl;
+  }
+  .scroll-dot {
+    width: 1px;
+    height: 50px;
+    background: rgba(201,168,76,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-dot::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    background: var(--secondary-color);
+    animation: scroll-anim 2s 1.5s infinite;
+  }
+  @keyframes scroll-anim {
+    from { top: -20px; }
+    to   { top: 100%; }
+  }
 .about {
     background-color: var(--primary-color);
     color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     padding: 4rem 10%;
 }
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+.about-content button {
+    margin-top: 20px;
+    height: 32px;
+    width: 100px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
 
-.about h2,
-.about p,
-.about button {
-    grid-column: 1;
-    text-align: left;
+.about-content a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .about img {
@@ -122,7 +193,45 @@ button a {
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: -10px 10px 0px rgba(255, 255, 255, 0.1);
+    mask-image: linear-gradient(black 90%, transparent ) ;
+}
+
+.service {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-list article {
+    margin: 10px 2em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.mapa {
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.mapa h2 {
+    color: var(--secondary-color);
+}
+
+.mapa iframe {
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .gallery {
@@ -161,7 +270,28 @@ footer {
     background-color: #000000;
     color: #fff;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer li {
+    list-style: none;
+
+}
+
+footer-enlace {
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    height: 32px;
+    width: 32px;
 }
 
 @media (max-width: 768px) {
