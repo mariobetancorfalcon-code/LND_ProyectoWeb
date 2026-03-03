@@ -27,7 +27,7 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Acerca de </a></li>
                 <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="html/contacto.html">Contacto</a></li>
             </ul>
 
         </nav>
@@ -38,7 +38,7 @@
             <div class="hero-content sekuya-regular">
                 <h1>Legacy - Professionals Barbers</h1>
             </div>
-            <div class="scroll-hint">
+            <div class="scroll-hint ocultar-movil">
                 <span>Scroll</span>
                 <div class="scroll-dot"></div>
               </div>
@@ -46,11 +46,11 @@
 
         <section class="about">
             <div class="about-content">
-                <h2>Acerca de</h2>
-                <p>  En Legacy cada detalle importa. 
+                <h2>En Legacy</h2>
+                <p> cada detalle importa. 
                     Nuestros barberos combinan técnicas clásicas con tendencias modernas para ofrecerte una experiencia única. 
                     No solo cortamos el pelo — definimos tu estilo</p>
-                <button><a href="">Leer más</a></button>
+                <button><a href="" class="sekuya-regular">Leer más</a></button>
             </div>
             <img src="../img/imgBarberia.jpg" alt="">
         </section>
@@ -58,32 +58,98 @@
         <section class="service">
             <h2>Servicios Destacados</h2> 
             <div class="services-list">
-                <article>
-                    <img src="" alt="">
+                <article class="service-card">
                     <h3>Legacy Service Classic</h3>
-                    <p>£40.00 - 40 min</p>
+                    <p class="service-text">Corte clásico con acabado a navaja y peinado.</p>
+                    <p class="service-price">£40.00 · 40 min</p>
                 </article>
-                <article>
-                    <img src="" alt="">
+                <article class="service-card">
                     <h3>Legacy Service Plus</h3>
-                    <p>£60.00 - 60 min</p>
+                    <p class="service-text">Corte + arreglo de barba con productos premium.</p>
+                    <p class="service-price">£60.00 · 60 min</p>
                 </article>
-                <article>
-                    <img src="" alt="">
+                <article class="service-card">
                     <h3>Legacy Service Beard</h3>
-                    <p>£40.00 - 20 min</p>
+                    <p class="service-text">Perfilado y cuidado de barba a medida.</p>
+                    <p class="service-price">£40.00 · 20 min</p>
                 </article>
-                <article>
-                    <img src="" alt="">
+                <article class="service-card">
                     <h3>Legacy Service Kids</h3>
-                    <p>£20.00 - 30 min</p>
+                    <p class="service-text">Corte para los más pequeños con trato cercano.</p>
+                    <p class="service-price">£20.00 · 30 min</p>
                 </article>
             </div>
         </section>
 
+        <section class="testimonials-section">
+            <h2 style="text-align: center; color: var(--secondary-color) ; font-size: 4rem;">Testimonios</h2>
+            <div class="testimonials-wrapper">
+                <div class="testimonials-track">
+                    <!-- Bloque original de testimonios -->
+                    <div class="card bg-card-testimonials">
+                        <article> 
+                            <img src="/img/usuario.png" alt="">
+                            <h3>Carlos Méndez</h3>
+                            <p>Servicio impecable, ambiente relajado y un corte que siempre queda perfecto. Desde que vengo aquí no cambio de barbería.</p>
+                        </article>
+                    </div>
+                    <div class="card bg-card-testimonials">
+                        <article>
+                            <img src="/img/usuario.png" alt="">
+                            <h3>James Williams</h3>
+                            <p>Encontré este sitio por recomendación y fue un acierto total. Puntuales, profesionales y muy atentos al detalle.</p>
+                        </article>
+                    </div>
+                    <div class="card bg-card-testimonials"> 
+                        <article>
+                            <img src="/img/usuario.png" alt="">
+                            <h3>Marco Rossi</h3>
+                            <p>Me asesoraron sobre el mejor estilo para mi tipo de cabello. Salí con un look nuevo y muchos cumplidos.</p>
+                        </article>
+                    </div>
+                    <!-- Duplicamos exactamente las mismas tarjetas para un bucle infinito fluido -->
+                    <div class="card bg-card-testimonials">
+                        <article> 
+                            <img src="/img/usuario.png" alt="">
+                            <h3>Carlos Méndez</h3>
+                            <p>Servicio impecable, ambiente relajado y un corte que siempre queda perfecto. Desde que vengo aquí no cambio de barbería.</p>
+                        </article>
+                    </div>
+                    <div class="card bg-card-testimonials">
+                        <article>
+                            <img src="/img/usuario.png" alt="">
+                            <h3>James Williams</h3>
+                            <p>Encontré este sitio por recomendación y fue un acierto total. Puntuales, profesionales y muy atentos al detalle.</p>
+                        </article>
+                    </div>
+                    <div class="card bg-card-testimonials"> 
+                        <article>
+                            <img src="/img/usuario.png" alt="">
+                            <h3>Marco Rossi</h3>
+                            <p>Me asesoraron sobre el mejor estilo para mi tipo de cabello. Salí con un look nuevo y muchos cumplidos.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="mapa">
-            <div>
-                <h2>Localización</h2>
+            <div class="map-container">
+                <div class="map-info">
+                    <span class="map-badge">Localización</span>
+                    <h2>Te esperamos en Sheffield</h2>
+                    <p class="map-text">
+                        Ven a disfrutar de la experiencia Legacy en un entorno cuidado al detalle, 
+                        con fácil acceso y buenas conexiones de transporte.
+                    </p>
+                    <div class="map-details">
+                        <p><strong>Dirección</strong><br>908 Ecclesall Rd, Sheffield S11 8TR, Reino Unido</p>
+                        <p><strong>Horario</strong><br>Lunes - Sábado: 10:00 - 20:00</p>
+                    </div>
+                    <a class="map-cta" href="https://maps.app.goo.gl/1AdoynAdZgB1MmBq7" target="_blank" rel="noopener noreferrer">
+                        Cómo llegar
+                    </a>
+                </div>
                 <div class="mapa-content">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.9676722194436!2d-1.51106432307458!3d53.3617334722937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879821664e7b04d%3A0x4c356bc0a513e911!2sChristine%20Clarke%20Aesthetic%20Skincare%2C%20908%20Ecclesall%20Rd%2C%20Sheffield%20S11%208TR%2C%20Reino%20Unido!5e0!3m2!1ses!2ses!4v1770885386726!5m2!1ses!2ses"
@@ -114,7 +180,7 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Acerca de </a></li>
                 <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="html/contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="social-media">

@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #131718;
+    --secondary-color: #fff;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.contact-section {
+    min-height: 90vh;
+    padding: 4rem 10%;
+    background-image: linear-gradient(rgba(19, 23, 24, 0.96), rgba(19, 23, 24, 0.96)), url('../img/FondoHome.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-header {
+    max-width: 700px;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    color: #c0c7d4;
+    font-size: 1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.contact-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.contact-card p  {
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.contact-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    background: #4d89d3;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact-cta:hover {
+    background: #072cce;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.75);
+}
+
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-enlace ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.footer-enlace a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    height: 32px;
+    width: 32px;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2.2rem;
+    }
+
+}

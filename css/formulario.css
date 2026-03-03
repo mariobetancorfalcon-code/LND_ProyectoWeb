@@ -156,7 +156,7 @@ footer {
     width: 100%;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .form-container {
         padding: 1.5rem;
