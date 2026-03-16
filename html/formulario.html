@@ -89,6 +89,12 @@
         </section>
     </main>
 
+    <script>
+        document.querySelector('.reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se recargue la página al enviar
+            alert('Ahora mismo no está disponible.');
+        });
+    </script>
 </body>
 
 </html>
